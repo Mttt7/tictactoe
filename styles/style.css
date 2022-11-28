@@ -92,7 +92,7 @@ body {
   background-color: green;
   cursor: pointer;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .choose-mode-buttons > * {
     font-size: 2.7rem;
     padding: 5px 0.5rem;
@@ -101,6 +101,15 @@ body {
 .choose-mode-buttons > *:hover {
   transform: scale(1.07);
   background-color: rgb(119, 145, 119);
+}
+.choose-mode-buttons .info {
+  font-size: 1.5rem;
+  background-color: rgb(72, 72, 222);
+}
+@media only screen and (max-width: 500px) {
+  .choose-mode-buttons .info {
+    font-size: 1rem;
+  }
 }
 
 .choose-character {
@@ -123,12 +132,12 @@ body {
   display: flex;
 }
 .character-choose > * img {
-  max-width: 90px;
+  max-width: 130px;
   height: auto;
   padding: 8px;
   border-radius: 50%;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .character-choose > * img {
     max-width: 65px;
   }
@@ -136,6 +145,10 @@ body {
 
 .selected {
   background-color: rgb(72, 72, 222) !important;
+}
+
+.hidden {
+  transform: scale(0);
 }
 
 .p1-character-choose > * img {

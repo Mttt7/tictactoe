@@ -111,7 +111,7 @@ body{
             border-radius: 10px;
             background-color:$color3;
             cursor: pointer;
-            @media only  screen and (max-width:400px) {
+            @media only  screen and (max-width:500px) {
             font-size: 2.7rem;
             padding: 5px 0.5rem;
             }
@@ -119,6 +119,13 @@ body{
         >*:hover{
             transform: scale(1.07);
             background-color: $color4;
+        }
+        .info{
+            @media only  screen and (max-width:500px) {
+                font-size: 1rem;
+                }
+            font-size: 1.5rem;
+            background-color: $color-selected;
         }
 
        
@@ -151,11 +158,11 @@ body{
 
         img{
             
-            max-width: 90px;
+            max-width: 130px;
             height: auto;
             padding: 8px;
             border-radius: 50%;
-            @media only  screen and (max-width:400px) {
+            @media only  screen and (max-width:500px) {
                 max-width: 65px;
             }
         }
@@ -164,6 +171,9 @@ body{
 
 .selected{
     background-color:$color-selected !important;
+}
+.hidden{
+    transform: scale(0);
 }
 .p1-character-choose >* img{
     background-color: $color-player1;
