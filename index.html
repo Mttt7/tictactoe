@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Sono:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"></head>
+<body>
+    <div class="container">
+        <div class="header">
+            War Of Earth
+        </div>
+
+        <div class="game-settings">
+            <div class="choose-mode-buttons">
+                <div class="vs-player-btn">vs Player</div>
+                <div class="vs-ai-btn">vs AI</div>
+            </div>
+            
+
+            <div class="choose-character" >
+
+
+                <div class="p1-character-choose character-choose">
+                    <div class="character player-character" data-character-id="0">
+                        <img src="images/cooljoe.png" alt="">
+                    </div>
+                    <div class="character player-character" data-character-id="1">
+                        <img src="/images/soldier.png" alt="">
+                    </div>
+                    <div class="character player-character" data-character-id="2">
+                        <img src="images/Lizz.png" alt="">
+                    </div>
+                    
+                </div>
+
+            
+
+                <div class="p2-character-choose character-choose">
+                    <div class="character ai-character" data-character-id="3">
+                        <img src="images/frankenstein.png" alt="">
+                    </div>
+                    <div class="character ai-character" data-character-id="4">
+                        <img src="images/cyborgsoldier.png" alt="">
+                    </div>
+                    <div class="character ai-character" data-character-id="5">
+                        <img src="images/evilscientist.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+
+
+        <div class="game" hidden>
+            <div class="players-display">
+                <div class="player1-display">
+                    <img src="" alt="">
+                    <div class="points" data-points-display="p1"></div>
+                </div>
+                <div class="player2-display">
+                    <img src="" alt="">
+                    <div class="points" data-points-display="p2"></div>
+                </div>
+            </div>
+
+            <div class="game-board">
+                <div class="cell" data-cell-id="0" data-selected="0"></div>
+                <div class="cell" data-cell-id="1" data-selected="0"></div>
+                <div class="cell" data-cell-id="2" data-selected="0"></div>
+                <div class="cell" data-cell-id="3" data-selected="0"></div>
+                <div class="cell" data-cell-id="4" data-selected="0"></div>
+                <div class="cell" data-cell-id="5" data-selected="0"></div>
+                <div class="cell" data-cell-id="6" data-selected="0"></div>
+                <div class="cell" data-cell-id="7" data-selected="0"></div>
+                <div class="cell" data-cell-id="8" data-selected="0"></div>
+            </div>
+
+            <div class="restart">RESTART</div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

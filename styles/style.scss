@@ -1,0 +1,168 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+//----- ^ RESET CSS ^  -----//
+//--------------------------//
+
+//--- global variables ---//
+$color1:white;
+$color2:rgb(211, 68, 25);
+$color3:green;
+$color4:rgb(119, 145, 119);
+$color-player1:rgb(63, 188, 63);
+$color-player2:rgb(219, 77, 38);
+$gradient1:linear-gradient(0deg, rgb(8, 0, 42) 0%, rgba(0,0,0,1) 100%);
+
+$font-sono:'Sono', sans-serif;
+$font-marker: 'Permanent Marker', cursive;
+
+//------------------------//
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container,
+.game-settings{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-family:$font-sono;
+    color:$color1;
+    background:$gradient1;
+}
+
+//--- Header ---//
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0px;
+    
+
+
+    background-color:$color2;
+    font-family:$font-marker;
+    font-size: 2.8rem;
+    font-weight: 300;
+}
+
+// --- Choose Mode ---//
+    .choose-mode-buttons{
+        //transform: scale(0);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:2rem;
+        padding: 5rem 0rem;
+        
+       
+        
+        >*{
+            flex:1 1 auto;
+            font-size: 3rem;
+            padding: 10px 1rem;
+            border-radius: 10px;
+            background-color:$color3;
+            cursor: pointer;
+            @media only  screen and (max-width:400px) {
+            font-size: 2.7rem;
+            padding: 5px 0.5rem;
+            }
+        }
+        >*:hover{
+            transform: scale(1.07);
+            background-color: $color4;
+        }
+
+       
+       
+    }
+    
+
+// ---Choose Character --//
+.choose-character{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+    
+}
+.character-choose{
+    height: auto;
+    width: 100%;
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap:1rem;
+    padding: 0.5rem;
+    
+    >*{ //.character
+        flex:1 1 auto;
+        display: flex;
+        
+
+        img{
+            
+            max-width: 90px;
+            height: auto;
+            padding: 8px;
+            border-radius: 50%;
+            @media only  screen and (max-width:400px) {
+                max-width: 65px;
+            }
+        }
+    }
+}
+.p1-character-choose >* img{
+    background-color: $color-player1;
+}
+.p2-character-choose >* img{
+    background-color: $color-player2;
+}
