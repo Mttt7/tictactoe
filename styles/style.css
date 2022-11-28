@@ -134,6 +134,10 @@ body {
   }
 }
 
+.selected {
+  background-color: rgb(72, 72, 222) !important;
+}
+
 .p1-character-choose > * img {
   background-color: rgb(63, 188, 63);
 }

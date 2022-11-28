@@ -49,6 +49,7 @@ $color1:white;
 $color2:rgb(211, 68, 25);
 $color3:green;
 $color4:rgb(119, 145, 119);
+$color-selected:rgb(72, 72, 222);
 $color-player1:rgb(63, 188, 63);
 $color-player2:rgb(219, 77, 38);
 $gradient1:linear-gradient(0deg, rgb(8, 0, 42) 0%, rgba(0,0,0,1) 100%);
@@ -159,6 +160,10 @@ body{
             }
         }
     }
+}
+
+.selected{
+    background-color:$color-selected !important;
 }
 .p1-character-choose >* img{
     background-color: $color-player1;
