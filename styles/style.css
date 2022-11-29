@@ -157,4 +157,11 @@ body {
 
 .p2-character-choose > * img {
   background-color: rgb(219, 77, 38);
+}
+
+.game .restart {
+  padding: 0.4rem 1.4rem;
+  margin-bottom: 0.4rem;
+  background-color: rgb(72, 72, 222);
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

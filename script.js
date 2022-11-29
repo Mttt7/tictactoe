@@ -3,10 +3,23 @@ const startVsAiButton = document.querySelector(".vs-ai-btn")
 const characters = document.querySelectorAll(".character")
 const info = document.querySelector("#info")
 
+const gameSettings = document.querySelector(".game-settings")
+const game = document.querySelector(".game")
+const restartButton = document.querySelector(".restart")
+
 // Settings
 info.innerText = ""
 info.classList.add("hidden")
+game.classList.add("hidden")
 //
+
+
+restartButton.addEventListener('click',()=>{
+    info.innerText = ""
+    info.classList.add("hidden")
+    game.classList.add("hidden")
+    gameSettings.classList.remove("hidden")
+})
 
 characters.forEach(ch=>{
     ch.addEventListener('click',markChoose)
@@ -86,7 +99,7 @@ function chooseMode(e){
     if(characterChosen()==0){
 
         if(e.target.classList[0]=="vs-player-btn") startGame(0)
-        if(e.target.classList[0]=="vs-ai-btn") return
+        if(e.target.classList[0]=="vs-ai-btn") startGame(1)
     }
     if(characterChosen()==2){
         info.classList.remove("hidden")
@@ -107,7 +120,13 @@ function chooseMode(e){
 }
 
 function startGame(mode){
+    //vsplayer  = 0
     if(mode==0){
-
+        gameSettings.classList.add("hidden")
+        game.classList.remove("hidden")
+    }
+    if(mode==1){
+        info.classList.remove("hidden")
+        info.innerText = "Coming soon :P"
     }
 }

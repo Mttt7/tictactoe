@@ -181,3 +181,20 @@ body{
 .p2-character-choose >* img{
     background-color: $color-player2;
 }
+
+
+//--------------------------//
+//--------GAME-------------//
+.game{
+
+
+
+
+
+    .restart{
+        padding: 0.4rem 1.4rem;
+        margin-bottom: 0.4rem;
+        background-color: $color-selected;
+        border-radius: 10px;
+    }
+}
