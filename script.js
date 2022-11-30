@@ -4,21 +4,27 @@ const characters = document.querySelectorAll(".character")
 const info = document.querySelector("#info")
 
 const gameSettings = document.querySelector(".game-settings")
-const game = document.querySelector(".game")
+const gameArea = document.querySelector(".game")
 const restartButton = document.querySelector(".restart")
+
+const playerImage = document.querySelector("#player-image")
+const aiImage = document.querySelector("#ai-image")
 
 // Settings
 info.innerText = ""
 info.classList.add("hidden")
-game.classList.add("hidden")
+gameArea.classList.add("hidden")
 //
 
 
 restartButton.addEventListener('click',()=>{
     info.innerText = ""
     info.classList.add("hidden")
-    game.classList.add("hidden")
+    gameArea.classList.add("hidden")
     gameSettings.classList.remove("hidden")
+    
+    playerImage.src=`${ch1}`
+    aiImage.src = `${ch2}`
 })
 
 characters.forEach(ch=>{
@@ -97,9 +103,14 @@ function chooseMode(e){
     //ai - 1
     
     if(characterChosen()==0){
+        
+        ch1= document.querySelector(`[data-character-id="${selectedArrPl[0]}"]`).children[0].src
+        console.log(ch1)
+        ch2=document.querySelector(`[data-character-id="${selectedArrAi[0]}"]`).children[0].src
+        console.log(ch2)
 
-        if(e.target.classList[0]=="vs-player-btn") startGame(0)
-        if(e.target.classList[0]=="vs-ai-btn") startGame(1)
+        if(e.target.classList[0]=="vs-player-btn") startGame(0,ch1,ch2)
+        if(e.target.classList[0]=="vs-ai-btn") startGame(1,ch1,ch2)
     }
     if(characterChosen()==2){
         info.classList.remove("hidden")
@@ -119,14 +130,23 @@ function chooseMode(e){
     
 }
 
-function startGame(mode){
+function startGame(mode,ch1,ch2){
     //vsplayer  = 0
     if(mode==0){
         gameSettings.classList.add("hidden")
-        game.classList.remove("hidden")
+        gameArea.classList.remove("hidden")
+        game(ch1,ch2)
     }
     if(mode==1){
         info.classList.remove("hidden")
         info.innerText = "Coming soon :P"
     }
+    
+}   
+
+function game(ch1,ch2){
+
+    playerImage.src=`${ch1}`
+    aiImage.src = `${ch2}`
+   
 }

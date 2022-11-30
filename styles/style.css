@@ -132,6 +132,7 @@ body {
   display: flex;
 }
 .character-choose > * img {
+  cursor: pointer;
   max-width: 130px;
   height: auto;
   padding: 8px;
@@ -149,6 +150,7 @@ body {
 
 .hidden {
   transform: scale(0);
+  display: none;
 }
 
 .p1-character-choose > * img {
@@ -159,9 +161,49 @@ body {
   background-color: rgb(219, 77, 38);
 }
 
+.game {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.game .stretch {
+  flex: 1 0 auto;
+  width: 100%;
+}
+.game .players-display {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.game .players-display .p-display {
+  display: flex;
+  align-items: center;
+}
+.game .players-display .p-display img {
+  max-width: 130px;
+}
+@media only screen and (max-width: 500px) {
+  .game .players-display .p-display img {
+    max-width: 65px;
+  }
+}
+.game .players-display .p-display .points {
+  font-size: 6rem;
+}
+.game .players-display .ai-display {
+  flex-direction: row-reverse;
+}
 .game .restart {
+  cursor: pointer;
   padding: 0.4rem 1.4rem;
   margin-bottom: 0.4rem;
   background-color: rgb(72, 72, 222);
   border-radius: 10px;
+}
+.game .restart:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */

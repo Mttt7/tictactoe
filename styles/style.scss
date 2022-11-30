@@ -54,6 +54,8 @@ $color-player1:rgb(63, 188, 63);
 $color-player2:rgb(219, 77, 38);
 $gradient1:linear-gradient(0deg, rgb(8, 0, 42) 0%, rgba(0,0,0,1) 100%);
 
+$max-width:130px;
+
 $font-sono:'Sono', sans-serif;
 $font-marker: 'Permanent Marker', cursive;
 
@@ -157,13 +159,13 @@ body{
         
 
         img{
-            
-            max-width: 130px;
+            cursor: pointer;
+            max-width: $max-width;
             height: auto;
             padding: 8px;
             border-radius: 50%;
             @media only  screen and (max-width:500px) {
-                max-width: 65px;
+                max-width: calc($max-width/2);
             }
         }
     }
@@ -174,6 +176,7 @@ body{
 }
 .hidden{
     transform: scale(0);
+    display: none;
 }
 .p1-character-choose >* img{
     background-color: $color-player1;
@@ -186,15 +189,56 @@ body{
 //--------------------------//
 //--------GAME-------------//
 .game{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+.stretch{
+    flex: 1 0 auto;
+    width: 100%;
+   
+}
 
+    .players-display{
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content:space-evenly;
 
+        .p-display{
+
+            display: flex;
+            align-items: center;
+            img{
+                max-width: $max-width;
+                @media only  screen and (max-width:500px) {
+                    max-width: calc($max-width/2);
+                }
+            }
+            .points{
+                    font-size: 6rem;
+            }
+        }
+        .ai-display{
+            flex-direction: row-reverse;
+        }
+       
+
+    }
 
 
 
     .restart{
+        cursor: pointer;
         padding: 0.4rem 1.4rem;
         margin-bottom: 0.4rem;
         background-color: $color-selected;
         border-radius: 10px;
+    }
+    .restart:hover{
+        transform: scale(1.1);
     }
 }
