@@ -63,25 +63,29 @@
                 <div class="players-display">
                     <div class="player1-display p-display">
                         <img src="" alt="" id="player-image">
-                        <div class="points" data-points-display="p1">2</div>
+                        <div class="points" data-points-display="p1" id="player-points-display">0</div>
                     </div>
+                    <div class="outcome"></div>
                     <div class="ai-display p-display">
                         <img src="" alt="" id="ai-image">
-                        <div class="points" data-points-display="p2">3</div>
+                        <div class="points" data-points-display="p2" id="ai-points-display">0</div>
                     </div>
                 </div>
     
-                <div class="game-board">
-                    <div class="cell" data-cell-id="0" data-selected="0"></div>
-                    <div class="cell" data-cell-id="1" data-selected="0"></div>
-                    <div class="cell" data-cell-id="2" data-selected="0"></div>
-                    <div class="cell" data-cell-id="3" data-selected="0"></div>
-                    <div class="cell" data-cell-id="4" data-selected="0"></div>
-                    <div class="cell" data-cell-id="5" data-selected="0"></div>
-                    <div class="cell" data-cell-id="6" data-selected="0"></div>
-                    <div class="cell" data-cell-id="7" data-selected="0"></div>
-                    <div class="cell" data-cell-id="8" data-selected="0"></div>
+                <div class="centered">
+                    <div class="game-board">
+                        <div class="cell" data-cell-id="0" data-selected="0"><img src="" alt="" data-selected="1"></div>
+                        <div class="cell" data-cell-id="1" data-selected="0"><img src="" alt="" data-selected="1"></div>
+                        <div class="cell" data-cell-id="2" data-selected="0"><img src="" alt="" data-selected="1"></div>
+                        <div class="cell" data-cell-id="3" data-selected="0"><img src="" alt="" data-selected="1"></div>
+                        <div class="cell" data-cell-id="4" data-selected="0"><img src="" alt="" data-selected="1"></div>
+                        <div class="cell" data-cell-id="5" data-selected="0"><img src="" alt="" data-selected="1"></div>
+                        <div class="cell" data-cell-id="6" data-selected="0"><img src="" alt="" data-selected="1"></div>
+                        <div class="cell" data-cell-id="7" data-selected="0"><img src="" alt="" data-selected="1"></div>
+                        <div class="cell" data-cell-id="8" data-selected="0"><img src="" alt="" data-selected="1"></div>
+                    </div>
                 </div>
+               
             </div>
             
 
@@ -89,6 +93,10 @@
 
             <div class="restart">RESTART</div>
 
+        </div>
+
+        <div id="end-game-modal">
+            <div class="text"><div id="winner"></div> has won the game!</div>
         </div>
 
 
