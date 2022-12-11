@@ -175,7 +175,7 @@ const playerFactory = (playerId) =>{
     const drawFigure = (cellId) =>{
         if(playerId==0){
                 arr.push(Number(cellId))
-                gameBoard.children[cellId].children[0].src="/images/X.png"
+                gameBoard.children[cellId].children[0].src="images/X.png"
                 gameBoard.children[cellId].dataset.selected="1"
                 if(arr.length>=3) checkWinner(playerId,arr)
                 //console.log("PLAYER ARR:",arr)
@@ -183,7 +183,7 @@ const playerFactory = (playerId) =>{
 
         if(playerId==1){
                 arr.push(Number(cellId))
-                gameBoard.children[cellId].children[0].src="/images/O.png"
+                gameBoard.children[cellId].children[0].src="images/O.png"
                 gameBoard.children[cellId].dataset.selected="1"
                 if(arr.length>=3) checkWinner(playerId,arr)
                 //console.log("AI ARR:",arr)
